@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #050505, #111);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  padding: 24px;
+}
+
+/* Video */
+
+.video-wrapper {
+  position: relative;
+  border-radius: 18px;
+  overflow: visible;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+}
+
+video {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+/* Timeline markers */
+
+.timeline-markers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Show only on hover */
+
+.video-wrapper:hover .timeline-markers {
+  opacity: 1;
+}
+
+.timeline-marker {
+  position: absolute;
+  width: 3px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timeline-marker:hover {
+  height: 16px;
+  background: #4ea1ff;
+}
+
+/* Tooltip */
+
+.timeline-marker::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.timeline-marker:hover::after {
+  opacity: 1;
+}
+
+/* Chapters */
+
+.chapters-wrapper {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.chapters-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 16px 6px 26px;
+}
+
+.chapter {
+  position: relative;
+  z-index: 1;
+  min-width: 210px;
+  background: #1b1b1b;
+  padding: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.chapter:hover {
+  transform: translateY(-6px);
+  background: #222;
+  box-shadow: 0 14px 30px rgba(78, 161, 255, 0.25);
+  z-index: 10;
+}
+
+.chapter-time {
+  font-size: 12px;
+  color: #4ea1ff;
+  margin-bottom: 6px;
+}
+
+.chapter-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.active {
+  background: #16263c;
+  outline: 1px solid #4ea1ff;
+}
+
+.title {
+  margin-top: 18px;
+  font-size: 26px;
+}
+
+.description {
+  color: #b5b5b5;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.chapters-label {
+  font-size: 17px;
+  color: #aaa;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeFWD Demo Video</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpeg" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="video-wrapper" id="videoWrapper">
+        <video id="video" controls>
+          <source src="video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="timeline-markers" id="timelineMarkers"></div>
+      </div>
+
+      <h1 class="title">CodeFWD Demo Video</h1>
+
+      <p class="description">
+        Interactive demo showcasing modernization strategy, execution flow and
+        product vision.
+      </p>
+
+      <h3 class="chapters-label">Chapters</h3>
+
+      <div class="chapters-wrapper">
+        <div class="chapters-slider" id="chapters"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
