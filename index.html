@@ -10,27 +10,56 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="video-wrapper" id="videoWrapper">
-        <video id="video" controls>
-          <source src="video.mp4" type="video/mp4" />
-        </video>
+    <div class="page">
+      <main class="container">
+        <section class="hero">
+          <div class="video-panel">
+            <div class="video-wrapper" id="videoWrapper">
+              <video id="video" controls>
+                <source src="video.mp4" type="video/mp4" />
+              </video>
+              <div class="timeline-overlay" id="timelineOverlay">
+                <div class="timeline-track" id="timelineTrack">
+                  <div class="timeline-segments" id="timelineSegments"></div>
+                  <div class="timeline-markers" id="timelineMarkers"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="timeline-markers" id="timelineMarkers"></div>
-      </div>
+          <aside class="info-panel">
+            <div class="eyebrow">CodeFWD</div>
+            <h1 class="title">Demo Video</h1>
+            <p class="description">
+              Interactive demo showcasing modernization strategy, execution flow
+              and product vision.
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-label">Duration</div>
+                <div class="stat-value" id="durationLabel">--</div>
+              </div>
+              <div class="stat">
+                <div class="stat-label">Chapters</div>
+                <div class="stat-value" id="chapterCount">--</div>
+              </div>
+            </div>
+            <div class="hint">
+              Tip: Use left and right arrows to skip 10 seconds.
+            </div>
+          </aside>
+        </section>
 
-      <h1 class="title">CodeFWD Demo Video</h1>
-
-      <p class="description">
-        Interactive demo showcasing modernization strategy, execution flow and
-        product vision.
-      </p>
-
-      <h3 class="chapters-label">Chapters</h3>
-
-      <div class="chapters-wrapper">
-        <div class="chapters-slider" id="chapters"></div>
-      </div>
+        <section class="chapters-section">
+          <div class="section-head">
+            <h2 class="chapters-label">Chapters</h2>
+            <div class="section-subtitle">Jump to any section below.</div>
+          </div>
+          <div class="chapters-wrapper">
+            <div class="chapters-slider" id="chapters"></div>
+          </div>
+        </section>
+      </main>
     </div>
 
     <script src="script.js"></script>
